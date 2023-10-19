@@ -345,7 +345,7 @@ namespace LinqExercise
         {
             var item = from data in details
                        from data1 in data.ScoreDetails
-                       orderby data.TraineeName descending, data.TraineeId descending
+                       orderby data.TraineeName descending, data1.Mark descending
                        select (data.TraineeId, data.TraineeName, data1.TopicName, data1.ExerciseName, data1.Mark);
             foreach (var item1 in item)
             {
